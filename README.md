@@ -2,7 +2,7 @@
 Intranet site for CS
 
 ## Up and Running
-# Clone the repository
+### Clone the repository
 git clone https://github.com/Pantheon-Technologies/cs-net.git
 
 ### Go inside the directory
