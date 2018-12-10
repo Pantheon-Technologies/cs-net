@@ -1,21 +1,21 @@
 # cs-net
 Intranet site for CS
 
-## Up and Running
-### Clone the repository
+### Up and Running
+#### Clone the repository
 git clone https://github.com/Pantheon-Technologies/cs-net.git
 
-### Go inside the directory
+#### Go inside the directory
 cd into cs-net
 
-### Install dependencies
+#### Install dependencies
 npm install
 
-### Start development server
+#### Start development server
 npm run dev
 
-### Build for production
+#### Build for production
 npm run build
 
-### Start production server
+#### Start production server
 npm start
