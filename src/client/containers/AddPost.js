@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addPost } from '../actions'
-​
-const addPost = ({ dispatch }) => {
+
+const AddPost = ({ dispatch }) => {
   let input
-​
+
   return (
     <div>
       <form
@@ -23,5 +23,5 @@ const addPost = ({ dispatch }) => {
     </div>
   )
 }
-​
-export default connect()(addPost)
+
+export default connect()(AddPost)
