@@ -1,29 +1,29 @@
 import { connect } from 'react-redux'
-import { toggleTodo } from '../actions'
+import { togglePost } from '../actions'
 import PostsList from '../components/PostsList'
 import { VisibilityFilters } from '../actions'
-​
-const getVisibleTodos = (todos, filter) => {
+
+const getVisiblePosts = (posts, filter) => {
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
-      return todos
+      return posts
     case VisibilityFilters.SHOW_COMPLETED:
-      return todos.filter(t => t.completed)
+      return posts.filter(t => t.completed)
     case VisibilityFilters.SHOW_ACTIVE:
-      return todos.filter(t => !t.completed)
+      return posts.filter(t => !t.completed)
     default:
       throw new Error('Unknown filter: ' + filter)
   }
 }
-​
+
 const mapStateToProps = state => ({
-  todos: getVisibleTodos(state.todos, state.visibilityFilter)
+  posts: getVisiblePosts(state.posts, state.visibilityFilter)
 })
-​
+
 const mapDispatchToProps = dispatch => ({
-  toggleTodo: id => dispatch(toggleTodo(id))
+  togglePost: id => dispatch(togglePost(id))
 })
-​
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
