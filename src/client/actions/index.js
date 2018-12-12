@@ -1,22 +1,22 @@
-let nextPostId = 0
+let nextPostId = 0;
 export const addPost = text => ({
   type: 'ADD_POST',
   id: nextPostId++,
-  text
-})
+  text,
+});
 
 export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',
-  filter
-})
+  filter,
+});
 
 export const togglePost = id => ({
   type: 'TOGGLE_POST',
-  id
-})
+  id,
+});
 
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
-}
+  SHOW_ACTIVE: 'SHOW_ACTIVE',
+};

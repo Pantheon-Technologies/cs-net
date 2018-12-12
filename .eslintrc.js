@@ -34,6 +34,9 @@ module.exports = {
 		"no-return-assign": 0,
 		"class-methods-use-this": 0,
 		"brace-style": [2, "stroustrup"],
+		"jsx-a11y/click-events-have-key-events": 0,
+		"jsx-a11y/no-noninteractive-element-interactions": 0,
+		"arrow-parens": 0,
 		"react/sort-comp": [2, {
 			order: [
 				"lifecycle",

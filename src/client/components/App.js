@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import AddPost from '../containers/AddPost'
-import VisiblePostsList from '../containers/VisiblePostsList'
+import AddPost from '../containers/AddPost';
+import VisiblePostsList from '../containers/VisiblePostsList';
+import HomePage from '../containers/HomePage.js';
 import './app.css';
 
 export default class App extends Component {
@@ -13,8 +14,7 @@ export default class App extends Component {
     const { username } = this.state;
     return (
       <div>
-        <AddPost />
-        <VisiblePostsList />
+        <HomePage />
       </div>
     );
   }
