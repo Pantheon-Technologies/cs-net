@@ -1,0 +1,14 @@
+{
+  "development": {
+    "username": "",
+    "password": null,
+    "database": "cs-net",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "production": {
+    "use_env_variable": "postgres://lvrpbgqi:kXGNpphygCAWMAqTq3T8jhi9E-DL7uAy@stampy.db.elephantsql.com:5432/lvrpbgqi",
+    "dialect": "postgres"
+  }
+}
