@@ -1,10 +1,10 @@
-const usersController = require('../controllers').usersCtrl;
-const postsController = require('../controllers').postsCtrl;
-const commentsController = require('../controllers').commentsCtrl;
+const usersController = require('../controllers/usersCtrl.js');
+const postsController = require('../controllers/postsCtrl.js');
+const commentsController = require('../controllers/commentsCtrl.js');
 
 module.exports = (app) => {
   app.get('/api', (req, res) => res.status(200).send({
-    message: 'Welcome to the Todos API!',
+    message: 'Welcome to the CS-NET',
   }));
 
   app.post('/api/users', usersController.create);

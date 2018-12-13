@@ -1,6 +1,5 @@
 const Users = require('../models').Users;
 const Posts = require('../models').Posts;
-const Comments = require('../models').Comments;
 
 
 module.exports = {
@@ -22,10 +21,6 @@ module.exports = {
         include: [{
           model: Posts,
           as: 'posts',
-        }],
-        include: [{
-          model: Comments,
-          as: 'comments',
         }],
       })
       .then(users => res.status(200).send(users))
