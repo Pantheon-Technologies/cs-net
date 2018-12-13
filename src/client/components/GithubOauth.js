@@ -2,14 +2,10 @@ import React, { Component } from 'react';
 
 
 class GithubOauth extends Component {
-  clickHandler() {
-    alert('I was Clicked!');
-  }
-
   render() {
     return (
       <div>
-        <a href="#" onClick={this.clickHandler}>
+        <a href="https://github.com/login/oauth/authorize?client_id=5f60818f890a97fad992&scope=read:org">
           Sign in with Github.
         </a>
       </div>
