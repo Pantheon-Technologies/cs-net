@@ -36,7 +36,8 @@ module.exports = {
 		"brace-style": [2, "stroustrup"],
 		"jsx-a11y/click-events-have-key-events": 0,
 		"jsx-a11y/no-noninteractive-element-interactions": 0,
-		"arrow-parens": 0,
+    "arrow-parens": 0,
+    "consistent-return": 0,
 		"react/sort-comp": [2, {
 			order: [
 				"lifecycle",
