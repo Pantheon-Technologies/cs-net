@@ -1,16 +1,39 @@
 const express = require('express');
 const os = require('os');
 const pg = require('pg');
+const Sequelize = require('sequelize');
 const bodyParser = require('body-parser');
 const request = require('superagent');
 const configjs = require('../../config.js');
 
 const app = express();
 
+const conString = 'postgres://xinuiqdv:jV94r4eOpwuSMTNi2HpPvX_sISQUyKx5@pellefant.db.elephantsql.com:5432/xinuiqdv';
+const client = new pg.Client(conString);
+
+client.connect((err) => {
+  if (err) {
+    return console.error('could not connect to postgres', err);
+  }
+  client.query('SELECT NOW() AS "theTime"', (err, result) => {
+    if (err) {
+      return console.error('error running query', err);
+    }
+    console.log(result.rows[0].theTime);
+    // >> output: 2018-08-23T14:02:57.117Z
+    client.end();
+  });
+});
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static('dist'));
+
+// app.get("/", (req, res) => {
+//   console.log('here!');
+// });
 
 app.get('/api/getUser name', (req, res) => res.send({ username: os.userInfo().username }));
 
